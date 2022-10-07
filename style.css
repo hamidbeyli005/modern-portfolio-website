@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.salute {
+  display: flex;
+  background: #111;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
+.salute .saluteTextContainer {
+  flex: 3;
+}
+.salute .saluteTextContainer .saluteText {
+  color: #333;
+  font-size: 54vw;
+  cursor: default;
+}
+.salute .saluteImgContainer {
+  flex: 1;
+}
+.salute .saluteImgContainer .saluteImg {
+  height: 100vh;
+}
+
+.nameContainer {
+  background: #663399;
+  height: 100vh;
+}
+.nameContainer .name {
+  color: #333;
+  font-size: 16vw;
+  cursor: default;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.jobContiner {
+  height: 100vh;
+}
+.jobContiner .jobTitle {
+  color: #333;
+  font-size: 10vw;
+  line-height: 100vh;
+}
+.jobContiner.dark {
+  background: #111111 url("./img/bg1.png");
+}
+.jobContiner.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
+
+.projectBtn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+.projectBtn::after {
+  content: "View Demo";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  color: #222;
+  text-decoration: none;
+}
+.projectBtn:hover::after {
+  transform: translateX(100%);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+  background: #111111;
+}
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+}
+.projects .projectsTitle {
+  font-size: 10vw;
+  color: #333;
+}
+.projects .project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 1024px) {
+  .projects .project {
+    flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .projects .project:nth-child(2n) {
+    flex-direction: column;
+  }
+}
+.projects .project .details {
+  flex: 1.3;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+.projects .project .details .projectTitle {
+  font-size: 5vw;
+}
+.projects .project .details .projectDesc {
+  font-size: 20px;
+  line-height: 40px;
+}
+.projects .project .phone {
+  width: 300px;
+  height: 600px;
+  position: relative;
+  flex: 1;
+}
+@media screen and (max-width: 1024px) {
+  .projects .project .phone {
+    transform: none !important;
+  }
+}
+.projects .project .phone .phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+.projects .project .phone .phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+.projects .project .phone .phoneScreen .phoneApp {
+  width: 100%;
+}
+.projects .project .laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .projects .project .laptop {
+    transform: none !important;
+  }
+}
+.projects .project .laptop .laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+.projects .project .laptop .laptopApp {
+  width: 100%;
+}
+.projects .project .laptop .laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.githubContainer {
+  background: #111111;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.githubContainer .githubTitle {
+  font-size: 100px;
+  color: #333;
+}
+@media screen and (max-width: 1024px) {
+  .githubContainer .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+}
+.githubContainer .githubChart {
+  width: 820px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .githubContainer .githubChart {
+    display: none;
+  }
+}
+.githubContainer .githubChart:hover .active:nth-child(2n+1) {
+  background-color: #195b2c;
+}
+.githubContainer .githubChart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+.githubContainer .githubChart .dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.githubContainer .githubChart .dates span {
+  color: #555;
+}
+.githubContainer .githubChart .boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.githubContainer .githubChart .boxContainer .box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 3s all ease;
+}
+.githubContainer .githubChart .boxContainer .box.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+.githubContainer .githubSm {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .githubContainer .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
